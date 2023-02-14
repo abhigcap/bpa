@@ -1,0 +1,18 @@
+<div class="header-component">
+     <div class="left-section">
+       <span>ROCKWELL AUTOMATION INDUSTRY SOLUTIONS</span>
+       <span>Batch Performance Analytics</span>
+     </div>
+     <div class="site-title">
+       Bayer Houston
+     </div>
+     <div class="right-section">
+       Logout
+     </div>   
+</div>
+<div class="dashboard-tab">
+  <ng-container *ngFor="let tab of tabList">
+    <div class="tab" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}"><b>{{tab.tabName}}</b></div>
+  </ng-container>
+   
+</div>

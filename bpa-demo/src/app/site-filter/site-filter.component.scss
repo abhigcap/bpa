@@ -1,0 +1,25 @@
+.left-navigation-section {
+    display: flex;
+    flex-flow: column;
+    padding: 30px 10px;
+    height: calc(100% - 90px);
+    border: 1px solid #c1c1c1;
+    .form-control {
+        margin-bottom: 20px;
+        .form-field select,input {
+            min-width: 175px;
+            height: 25px;
+        }
+    }
+    .action-buttons {
+        margin-top: 20px;
+        text-align: center;
+        button {
+            width: 78px;
+            height: 27px;
+            background: #0579cc;
+            color: #fff;
+            border-style: none;
+        }
+    }
+}

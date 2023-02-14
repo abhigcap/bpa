@@ -1,1 +1,26 @@
-<p>site-dashboard works!</p>
+<div class="main-content">
+    <div class="left-section">
+        <app-site-filter></app-site-filter>
+    </div>
+    <div class="right-section">
+        <div class="top-section">
+            <app-site-metric-tab></app-site-metric-tab>
+        </div>
+        <div class="main-section">
+            <app-bpi-contributor></app-bpi-contributor>
+            <div class="graph">
+                <div class="chart-container">
+                <div class="chart-section">
+                    <app-histogram-chart></app-histogram-chart></div>   
+                    <div class="chart-section">
+                        <app-trend-chart></app-trend-chart></div> 
+                </div>
+
+            </div>
+            <app-batch-performance-list></app-batch-performance-list>
+        </div>
+    </div>
+   
+
+</div>
+

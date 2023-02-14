@@ -1,0 +1,19 @@
+.main-content {
+    display: flex;
+    height: calc(100% - 87px);
+    .left-section{
+        min-width: 200px;
+
+    }
+    .right-section {
+        width: -webkit-fill-available;    
+        overflow: overlay;
+    }
+    .chart-container{
+         display: flex;
+         justify-content: space-between;
+         .chart-section {
+            width: 49%;
+         }
+    }
+}
