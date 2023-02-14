@@ -1,1 +1,36 @@
-<p>site-dashboard works!</p>
+<div class="main-content">
+    <div class="left-section">
+        <app-site-filter></app-site-filter>
+    </div>
+    <div class="right-section">
+        <div class="top-section">
+            <app-site-metric-tab></app-site-metric-tab>
+        </div>
+        <div class="main-section">
+            <app-bpi-contributor></app-bpi-contributor>
+            <div class="graph">
+                <div class="chart-continer">
+                    <div class="line-chart-container">   
+                         <div id="container"></div>
+                    </div>
+
+                    <div class="line-chart-container">    
+                        <div class="boxChart__container" [ngClass]="{'boxChart--loading' : loadingData}">        
+                            <div>      
+                                <highcharts-chart [Highcharts]="Highcharts" [constructorType]="chartConstructor" 
+                                [options]="progressTracking" [callbackFunction]="chartCallback"             
+                                [(update)]="updateFlag" [oneToOne]="oneToOneFlag" style="width: 100%; height: auto; display: block;"> 
+                                </highcharts-chart>       
+                             </div>    
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <app-batch-performance-list></app-batch-performance-list>
+        </div>
+    </div>
+   
+
+</div>
+

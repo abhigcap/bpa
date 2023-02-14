@@ -1,0 +1,16 @@
+.main-content {
+    display: flex;
+    .left-section{
+        min-width: 200px;
+
+    }
+    .right-section {
+        width: -webkit-fill-available;
+    }
+    .chart-continer{
+         display: flex;
+    }.line-chart-container{
+        width: 50%;
+        height: 50%;
+    }
+}
