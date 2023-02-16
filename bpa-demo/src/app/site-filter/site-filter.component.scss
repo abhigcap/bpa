@@ -1,0 +1,14 @@
+.left-navigation-section {
+    display: flex;
+    flex-flow: column;
+    padding: 20px 10px;
+    .form-control {
+        margin-bottom: 20px;
+        .form-field select,input {
+            min-width: 150px;
+        }
+    }
+    .action-buttons {
+        margin-top: 20px;
+    }
+}

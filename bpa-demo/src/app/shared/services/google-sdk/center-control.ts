@@ -82,8 +82,9 @@ export class CenterControl {
       btn.style.color = 'rgb(25,25,25)';
       btn.style.cursor = 'pointer';
       btn.style.fontFamily = 'Roboto,Arial,sans-serif';
-      btn.style.fontSize = '14px';
-      btn.style.minWidth = '140px';
+      btn.style.fontSize = '13px';
+      btn.style.minWidth = '100px';
+      btn.style.width = 'auto';
       btn.style.margin = '8px 0 22px';
       btn.style.padding = '0 5px';
       btn.style.textAlign = 'center';

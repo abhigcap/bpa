@@ -1,0 +1,65 @@
+.black-bell-icon {
+    border: 2px solid #67c4e6;
+    border-radius: 5px;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+.black-graph-icon {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+.row-1 {
+    font-family: 'Calibri';
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+
+    .col-2 {
+        display: flex;
+        gap: 5px;
+    }
+
+    h3 {
+        padding-left: 3px;
+        color: #235d9f;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    
+}
+
+.site-details-card{
+    padding: 4px;
+    line-height: 6px;
+    margin-bottom: 5px;
+    border: 2px solid #235d9f;
+}
+
+.site-status {
+    p {
+        margin: 0px;
+        font-size: 14px;
+    line-height: 16px;
+    font-weight: 550;
+    }
+}

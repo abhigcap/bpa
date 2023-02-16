@@ -1,0 +1,126 @@
+.header-component {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .left-section {
+        display: inline;
+        span {
+            display: block;
+        }
+    }
+    .site-tile {
+    }
+    .right-section {
+    }
+}
+
+.dashboard-tab{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    height: 51px;
+    background: #0579cc;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 5px;
+    div {
+        height: 21px;
+        width: auto;
+        min-width: 120px;
+        padding: 5px;
+        //background: #fff;
+        color: #fff;
+        margin: 0 5px;
+    }
+
+    div:hover {
+        background: #fff;
+        color: black;
+    }
+}
+
+.nav-active {
+    color: black !important;
+    font-weight: 700;
+    align-items: center;
+    background-color: white;
+    .dashboard-tab div{
+        background-color: greenyellow;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-disabled {
+    div {
+        color: #c2c3c4 !important;
+    }
+    pointer-events: none;
+}
+
+.left-section {
+    color: #25a9e1 ;
+    .custom-heading-1 {
+        border-top: 1.5px solid rgb(182, 182, 182);
+        font-size: 12px;
+        font-weight: 5500;
+    }
+    .custom-heading-2 {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        font-size: 18px;
+        h1{
+            font-weight: 700;
+        }
+        h2 {
+            padding-top: 6px;
+            font-weight: 400;
+        }
+    }
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-right: 30px;
+}
+
+.apply-btn {
+    background-color: #235d9f;
+    color: white;
+    height: 30px;
+    width: auto;
+    min-width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.site-title{
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.username{
+    color: #1467a5;
+    img {
+        height: 22px;
+        max-width: 100%;
+    }
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    p {
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

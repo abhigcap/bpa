@@ -23,8 +23,8 @@ export class MapsSearchBar {
         input.style.color = 'rgb(25,25,25)';
         input.style.cursor = 'Cursor';
         input.style.fontFamily = 'Roboto,Arial,sans-serif';
-        input.style.fontSize = '14px';
-        input.style.minWidth = '120px';
+        input.style.fontSize = '12px';
+        input.style.minWidth = '100px';
         input.style.margin = '8px 0 22px';
         input.style.padding = '0 5px';
 
