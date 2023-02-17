@@ -129,13 +129,13 @@
     padding: 10px 10px 10px 0px;
     height: 28px;
     input{
-        border: 2px solid rgb(224, 224, 224);
+        border: 2px solid rgb(186, 185, 185);
         min-width: 20px !important;
         width: 100px;
     } 
     
     select {
-        border: 2px solid rgb(224, 224, 224);
+        border: 2px solid rgb(186, 185, 185);
         min-width: 50px;
         width: -webkit-fill-available;
     }
@@ -143,4 +143,73 @@
 
 .col-1, .col-2{
     display: flex;
+}
+
+.grey-calendar-date-icon {
+    border: 2px solid rgb(186, 185, 185);
+    border-radius: 5px;
+    height: 22px;
+    width: 22px;
+    display: flex;
+    margin-left: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.apply-btn {
+    background: #1467a5;
+    cursor: pointer;
+    color: white;
+    min-width: 60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.map-view-btn {
+    background: #ca3121;
+    cursor: pointer;
+    color: white;
+    min-width: 80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 2px;
+}
+
+.list-view-btn {
+    cursor: pointer;
+    min-width: 80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 2px;
+}
+
+.list-view-btn:hover {
+    background: #ca3121;
+    color: white;
+    cursor: pointer;
+    min-width: 80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.refresh-btn {
+    cursor: pointer;
+    min-width: 80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 5px;
+    img {
+        height: 16px;
+        width: 16px;
+    }
 }

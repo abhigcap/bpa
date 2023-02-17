@@ -25,32 +25,37 @@
         <div class="filter-bar">
             <div class="col-1">
                 <input placeholder="Start Date">
-                <button> click </button>
+                <div class="grey-calendar-date-icon">
+                    <img src="../../assets/png/grey-calendar-date-icon.png">
+                </div>
             </div>
             <div class="col-2">
                 <input placeholder="Start Date">
-                <button> click </button>
+                <div class="grey-calendar-date-icon">
+                    <img src="../../assets/png/grey-calendar-date-icon.png">
+                </div>
             </div>
             <select>    
-                <option value="Select a Region" disabled selected>Select your option</option>
+                <option value="Select a Region" disabled selected>Select a Region</option>
             </select>
             <select>
-                <option value="Select Product" disabled selected>Select your option</option>
+                <option value="Select Product" disabled selected>Select Product</option>
             </select>
             <select>
-                <option value="Select Recipe" disabled selected>Select your option</option>
+                <option value="Select Recipe" disabled selected>Select Recipe</option>
             </select>
-            <div>
+            <div class="apply-btn">
                 Apply
             </div>
-            <div>
+            <div class="map-view-btn">
                 Map view
             </div>
-            <div>
+            <div class="list-view-btn">
                 List view
             </div>
-            <div>
-                Refresh
+            <div class="refresh-btn">
+                <img src="../../assets/png/refresh-icon.png">
+                <div>Refresh</div>
             </div>
         </div>
         <app-google-sdk class="gmaps" height="75vh" [map-markers]="markers"></app-google-sdk>
