@@ -17,6 +17,11 @@ import { HighchartsChartModule } from "highcharts-angular";
 import { GoogleSdkComponent } from './shared/components/google-sdk/google-sdk.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SiteDetailsCardComponent } from './shared/components/site-details-card/site-details-card.component';
+import { SearchSitePipe } from './shared/pipes/search-site.pipe';
+import { FormsModule } from '@angular/forms';
+import { SortPipe } from './shared/pipes/sort.pipe';
+import { EnterpriseSideBarComponent } from './shared/components/enterprise-side-bar/enterprise-side-bar.component';
+import { EnterpriseFilterBarComponent } from './shared/components/enterprise-filter-bar/enterprise-filter-bar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,11 @@ import { SiteDetailsCardComponent } from './shared/components/site-details-card/
     BpiContributorComponent,
     BatchPerformanceListComponent,
     GoogleSdkComponent,
-    SiteDetailsCardComponent
+    SiteDetailsCardComponent,
+    SearchSitePipe,
+    SortPipe,
+    EnterpriseSideBarComponent,
+    EnterpriseFilterBarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,8 @@ import { SiteDetailsCardComponent } from './shared/components/site-details-card/
     HttpClientModule,
     AgGridModule,
     HighchartsChartModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

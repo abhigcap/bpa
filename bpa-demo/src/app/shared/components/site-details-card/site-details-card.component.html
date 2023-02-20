@@ -2,10 +2,10 @@
     <div class="row-1">
         <div class="col-1">
             <div class="card-timestamp">
-                <p>{{SiteDetails.timeStamp}}</p>
+                <p>{{SiteDetails.timeStamp | date : 'medium' | uppercase }}</p>
             </div>
             <div class="site-name">
-                <h3>{{SiteDetails.name}}</h3>
+                <h3>{{ SiteDetails.name }}</h3>
             </div>
             
         </div>

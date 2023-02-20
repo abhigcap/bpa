@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SiteDetails } from '../shared/interface/site-details';
+import { NgModel } from '@angular/forms';
+import { SortOrder } from '../shared/pipes/sort.pipe';
+import { SearchSitePipe } from '../shared/pipes/search-site.pipe';
 
 @Component({
   selector: 'app-enterprise-dashboard',
@@ -9,20 +12,23 @@ import { SiteDetails } from '../shared/interface/site-details';
 export class EnterpriseDashboardComponent implements OnInit {
   siteDetails: Array<SiteDetails> = [];
   markers: any = [];
-  constructor() {
+
+  ngOnInit() {
     this.generateMockSiteDetails();
     this.generateMarkers();
   }
-  ngOnInit() {
-
-  }
 
   generateMockSiteDetails() {
-    for(let i=0;i<70;i++) {
+    const siteNames = ['Bayer Corporate', 'New York', 'Texas', 'Chicago', 'Seatle', 'Boise', 'New Jersey', 'Tennesse', 'California', 'Massachusetts', 'Hawaii', 'Alaska', 'Florida'];
+    this.siteDetails = [];
+    for(let i=0;i<50;i++) {
       const item: SiteDetails = {
-        name: 'Bayer Houston', status:'QP1: Penicillin Yield is below LSL(12.26 < 15.0)', timeStamp:'08/16/2022, 04:00 AM'};
-      this.siteDetails = [...this.siteDetails, item ];
-    }
+        name: siteNames[Math.floor(Math.random() * 13)], status:'QP1: Penicillin Yield is below LSL(12.26 < 15.0)', timeStamp:'08/16/2022, 04:00 AM'};
+      if(!((this.siteDetails?.find(e=> e?.name === item.name)?.name?.length ?? 0) > 0)) {
+        this.siteDetails = [...this.siteDetails, item ];
+      }
+    };
+    console.log(this.siteDetails);
   }
 
   generateMarkers() {

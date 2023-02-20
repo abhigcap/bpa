@@ -1,63 +1,9 @@
 <div class="enterprise-tab-content">
     <div class="enterprise-side-bar" id="scroll-style">
-        <div class="enterprise-side-bar-header">
-            <div class="enterprise-search-bar">
-                <input placeholder="Search">
-                <div class="enterprise-search-magnifier-icon">
-                    <img src="../../assets/png/white-magnifying-glass.png">
-                </div>
-            </div>
-            <div class="black-graph-icon">
-                <img src="../../assets/png/black-graph-icon.png">
-            </div>
-            <div class="black-bell-icon">
-                <img src="../../assets/png/black-bell-icon.png">
-            </div>
-        </div> 
-        <ul class="enterprise-side-bar-list">
-            <div class="enterprise-site-card-collar"></div>
-            <div class="enterprise-site-card">
-                <app-site-details-card class="site-card-component" *ngFor="let i of siteDetails" [site-details]="i"></app-site-details-card>
-            </div>
-        </ul>
+        <app-enterprise-side-bar [site-details]="siteDetails"></app-enterprise-side-bar>    
     </div>
     <div class="enterprise-main-content">
-        <div class="filter-bar">
-            <div class="col-1">
-                <input placeholder="Start Date">
-                <div class="grey-calendar-date-icon">
-                    <img src="../../assets/png/grey-calendar-date-icon.png">
-                </div>
-            </div>
-            <div class="col-2">
-                <input placeholder="Start Date">
-                <div class="grey-calendar-date-icon">
-                    <img src="../../assets/png/grey-calendar-date-icon.png">
-                </div>
-            </div>
-            <select>    
-                <option value="Select a Region" disabled selected>Select a Region</option>
-            </select>
-            <select>
-                <option value="Select Product" disabled selected>Select Product</option>
-            </select>
-            <select>
-                <option value="Select Recipe" disabled selected>Select Recipe</option>
-            </select>
-            <div class="apply-btn">
-                Apply
-            </div>
-            <div class="map-view-btn">
-                Map view
-            </div>
-            <div class="list-view-btn">
-                List view
-            </div>
-            <div class="refresh-btn">
-                <img src="../../assets/png/refresh-icon.png">
-                <div>Refresh</div>
-            </div>
-        </div>
+        <app-enterprise-filter-bar></app-enterprise-filter-bar>
         <app-google-sdk class="gmaps" height="75vh" [map-markers]="markers"></app-google-sdk>
     </div>
 </div>
