@@ -32,7 +32,6 @@
     align-items: start;
     justify-content: space-between;
     
-
     .col-2 {
         display: flex;
         gap: 5px;
@@ -61,5 +60,14 @@
         font-size: 14px;
     line-height: 16px;
     font-weight: 550;
+    }
+}
+
+.card-timestamp {
+    p {
+        margin: 0px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600;
     }
 }

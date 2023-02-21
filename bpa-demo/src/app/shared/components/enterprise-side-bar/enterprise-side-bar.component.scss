@@ -15,11 +15,11 @@
 
 .enterprise-search-bar {
     display: flex;
-    min-width: 210px;
+    min-width: 20%;
     width: -webkit-fill-available;
     input {
         border: 2px solid rgb(224, 224, 224);
-        min-width: 160px;
+        min-width: 15%;
         width: -webkit-fill-available;
     }
 }
@@ -37,7 +37,7 @@
     border: 2px solid #67c4e6;
     border-radius: 5px;
     height: 28px;
-    width: 28px;
+    width: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,15 +67,14 @@
     flex-direction: row;
     justify-content: start;
     padding: 0px;
-    
 }
 
 .enterprise-site-card-collar{
-    border: 10px solid #f8a007;
-    
+    border: 7px solid #f8a007;   
 }
 
 .enterprise-site-card{
     width: -webkit-fill-available;
+    min-width: 15%;
     padding: 10px 0px 10px 10px;
 }
