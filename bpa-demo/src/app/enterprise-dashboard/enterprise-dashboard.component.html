@@ -1,9 +1,9 @@
 <div class="enterprise-tab-content">
     <div class="enterprise-side-bar" id="scroll-style">
-        <app-enterprise-side-bar [site-details]="siteDetails"></app-enterprise-side-bar>    
+        <app-enterprise-side-bar [site-details]="siteDetails" (enterpriseExceptionEvent)="setExceptionBtnFlag($event)"></app-enterprise-side-bar>    
     </div>
     <div class="enterprise-main-content">
         <app-enterprise-filter-bar></app-enterprise-filter-bar>
-        <app-google-sdk class="gmaps" height="75vh" [map-markers]="markers"></app-google-sdk>
+        <app-google-sdk class="gmaps" height="75vh" [map-markers]="markers" [show-map-overlap]="entrpiseExceptionBtn"><div>Enterprise exception works!</div></app-google-sdk>
     </div>
 </div>

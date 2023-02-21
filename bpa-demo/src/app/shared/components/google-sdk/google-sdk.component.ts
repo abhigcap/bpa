@@ -14,6 +14,7 @@ export class GoogleSdkComponent implements AfterViewInit {
   @Input('map-markers') markers:any = [];
   @Input('height') height:any = "100vh";
   @Input('width') width:any = "100%";
+  @Input('show-map-overlap') isMapOverlap: boolean = false;
 
   map!: google.maps.Map;
   mapOptions: google.maps.MapOptions = {

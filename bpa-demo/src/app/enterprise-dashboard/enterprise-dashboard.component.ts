@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { SiteDetails } from '../shared/interface/site-details';
 import { NgModel } from '@angular/forms';
 import { SortOrder } from '../shared/pipes/sort.pipe';
@@ -12,10 +12,18 @@ import { SearchSitePipe } from '../shared/pipes/search-site.pipe';
 export class EnterpriseDashboardComponent implements OnInit {
   siteDetails: Array<SiteDetails> = [];
   markers: any = [];
+  entrpiseExceptionBtn: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.generateMockSiteDetails();
     this.generateMarkers();
+  }
+
+  setExceptionBtnFlag(isExceptionBtn: boolean) { 
+    this.entrpiseExceptionBtn =isExceptionBtn;
   }
 
   generateMockSiteDetails() {

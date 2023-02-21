@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { SortPipe } from './shared/pipes/sort.pipe';
 import { EnterpriseSideBarComponent } from './shared/components/enterprise-side-bar/enterprise-side-bar.component';
 import { EnterpriseFilterBarComponent } from './shared/components/enterprise-filter-bar/enterprise-filter-bar.component';
+import { EnterpriseMapOverlapComponent } from './shared/components/enterprise-map-overlap/enterprise-map-overlap.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EnterpriseFilterBarComponent } from './shared/components/enterprise-fil
     SearchSitePipe,
     SortPipe,
     EnterpriseSideBarComponent,
-    EnterpriseFilterBarComponent
+    EnterpriseFilterBarComponent,
+    EnterpriseMapOverlapComponent
   ],
   imports: [
     BrowserModule,

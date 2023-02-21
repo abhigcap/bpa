@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SiteDetails } from '../../interface/site-details';
 import { SearchSitePipe } from '../../pipes/search-site.pipe';
 import { SortOrder } from '../../pipes/sort.pipe';
@@ -14,6 +14,8 @@ export class EnterpriseSideBarComponent {
   searchStr: any = '';
   sortOrder: SortOrder = 'unsorted';
   searchSitePipe!: SearchSitePipe;
+  @Output() enterpriseExceptionEvent = new EventEmitter<boolean>;
+  enterpriseExceptionBtn: boolean = false;
 
   onSearchSite(searchString: any){
     this.searchStr = searchString;
@@ -34,5 +36,10 @@ export class EnterpriseSideBarComponent {
     if (event.key === "Backspace" || event.key === "Delete") {
         this.searchStr = (event.target as HTMLInputElement).value;
     }
+  }
+
+  onClickExceptionBellIcon() {
+    this.enterpriseExceptionBtn = !this.enterpriseExceptionBtn;
+    this.enterpriseExceptionEvent.emit(this.enterpriseExceptionBtn);
   }
 }
