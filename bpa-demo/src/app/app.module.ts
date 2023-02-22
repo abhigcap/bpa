@@ -15,6 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartModule } from "highcharts-angular";
 import { TrendChartComponent } from './trend-chart/trend-chart.component';
 import { HistogramChartComponent } from './histogram-chart/histogram-chart.component';
+import { GetBatchStatusPipe } from './pipes/get-batch-status.pipe';
+import { GetBatchFormulationsPipe } from './pipes/get-batch-formulation.pipe';
+import { GetFilteredBatchDetailsPipe } from './pipes/get-filtered-batch-details.pipe';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { HistogramChartComponent } from './histogram-chart/histogram-chart.compo
     BpiContributorComponent,
     BatchPerformanceListComponent,
     TrendChartComponent,
-    HistogramChartComponent
+    HistogramChartComponent,
+    GetBatchStatusPipe,
+    GetBatchFormulationsPipe,
+    GetFilteredBatchDetailsPipe
   ],
   imports: [
     BrowserModule,

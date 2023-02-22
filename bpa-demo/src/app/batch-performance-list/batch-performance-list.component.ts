@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { GetFilteredBatchDetailsPipe } from '../pipes/get-filtered-batch-details.pipe';
 
 @Component({
   selector: 'app-batch-performance-list',
   templateUrl: './batch-performance-list.component.html',
   styleUrls: ['./batch-performance-list.component.scss']
 })
-export class BatchPerformanceListComponent {
+export class BatchPerformanceListComponent implements OnInit {
 
  // Each Column Definition results in one Column.
  public columnDefs: ColDef[] = [
@@ -42,16 +43,39 @@ export class BatchPerformanceListComponent {
  public rowData$!: Observable<any[]>;
  url = 'http://localhost:4200';
 
+ batchDetails: any = [];
+ batchDetailsDisplay: any = [];
+ getFilteredBatchDetailsPipe!: GetFilteredBatchDetailsPipe;
+
  // For accessing the Grid's API
  @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
- constructor(private http: HttpClient) {}
+ constructor(private http: HttpClient) {
+  this.getFilteredBatchDetailsPipe = new GetFilteredBatchDetailsPipe();
+ }
 
  // Example load data from sever
  onGridReady(params: GridReadyEvent) {
    this.rowData$ = this.http
-     .get<any[]>('assets/mock.json');
+     .get<any[]>('https://63f5b2fe9daf59d1ad798b1a.mockapi.io/api/v1/GetBatchDetails');
  }
+
+ ngOnInit() {
+  this.getBatchDetails();
+ }
+
+ getBatchDetails() {
+  this.http.get<any[]>('https://63f5b2fe9daf59d1ad798b1a.mockapi.io/api/v1/GetBatchDetails').subscribe(
+    response => { 
+      console.log(response);
+      this.batchDetails = this.batchDetailsDisplay = response;
+    }
+    );
+  }
+
+  onApplyBatchFilters(batchID: string, batchFormation: string, batchStatus: string) {
+      this.batchDetailsDisplay = this.getFilteredBatchDetailsPipe.transform(this.batchDetails, batchID,  batchFormation, batchStatus);
+  }
 
  // Example of consuming Grid Event
  onCellClicked( e: CellClickedEvent): void {
@@ -63,5 +87,14 @@ export class BatchPerformanceListComponent {
    this.agGrid.api.deselectAll();
  }
 
- 
+ public tabList = [
+  { tabName: "Batches"},
+  { tabName: "Recipes"},
+  { tabName: "Equipment"}
+];
+public selectedTab = 'Batches';
+
+public selectTab(tabName: string) {
+  this.selectedTab = tabName;
+}
 }

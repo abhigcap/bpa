@@ -1,15 +1,51 @@
 <div class="batch-list-header"><b>Batch Recipes and Equipments</b></div>
 <!-- Button to clear selection -->
 <!-- <button (click)="clearSelection()">Clear Selection</button> -->
+
+<!-- Batches changes-->
+<div class="batches-nav-bar">
+  <ng-container *ngFor="let tab of tabList">
+    <div class="batches-nav-bar-item" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}">{{tab.tabName}}</div>
+  </ng-container>
+</div>
+
+<!-- Batch filters-->
+<div class="batche-filters">
+  <div class="batche-filters-items">
+    <div style="color: rgb(53, 79, 53)">{{'Batches' | uppercase }}</div>
+    <input placeholder="Batch ID" class="batche-filters-form" #BatchID>
+  </div>
+  <div class="batche-filters-items">
+    <div>{{'Formulations' | uppercase }}</div>
+    <select class="batche-filters-form" #BatchFormation>
+      <option>All</option>
+      <option *ngFor="let formulation of (batchDetails | getAllBatchFormulations)">{{formulation}}</option>
+    </select>
+  </div>
+  <div class="batche-filters-items">
+    <div>{{'Status' | uppercase }}</div>
+    <select class="batche-filters-form" #BatchStatus>
+      <option>All</option>
+      <option *ngFor="let status of (batchDetails | getAllBatchStatus)">{{status}}</option>
+    </select>
+  </div>
+  <div class="filter-btns">
+    <button class="filter-btn" (click)="onApplyBatchFilters(BatchID.value, BatchFormation.value, BatchStatus.value)">Apply</button>
+    <button class="filter-btn" (click)="getBatchDetails()">Recalculate KPIs</button>
+  </div>
+</div>
+
 <!-- AG Grid Angular Component -->
 <ag-grid-angular
    style="width: 1260px; height: 500px"
    class="ag-theme-alpine"
    [columnDefs]="columnDefs"
    [defaultColDef]="defaultColDef"
-   [rowData]="rowData$ | async"
+   [rowData]="batchDetailsDisplay"
    [rowSelection]="'multiple'"
    [animateRows]="true"
-   (gridReady)="onGridReady($event)"
+   
    (cellClicked)="onCellClicked($event)"
  ></ag-grid-angular>
+
+ <!-- (gridReady)="onGridReady($event)" -->

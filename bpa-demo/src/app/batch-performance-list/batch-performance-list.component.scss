@@ -15,3 +15,64 @@
     padding: 5px;
     margin-top: 5px;
 }
+
+.batches-nav-bar {
+    display: flex;
+    .selected {
+        background-color: #fff;
+        color: #000;
+        opacity: 1;
+        text-decoration: underline;
+        font-weight: 800;
+    }
+}
+
+.batches-nav-bar-item {
+    padding: 10px;
+    color: gray;
+    vertical-align: middle;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.batche-filters {
+    max-width: 75%;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-end;
+    gap: 10px;
+    line-height: 20px;
+    padding: 5px;
+    input {
+        height: 25px;
+        width: -webkit-fill-available;
+    }
+    select {
+        height: 30px;
+        width: -webkit-fill-available;
+    }
+    .batche-filters-items {
+        min-height: 40px;
+        width: -webkit-fill-available;
+        gap: 5px;
+    }
+    div {
+        font-weight: 800;
+        font-size: 12px;
+    }
+}
+
+.filter-btns{
+    display: flex;
+    min-width: 40%;
+    
+    height: 30px;
+    gap: 5px;
+    button {
+        padding: 0px 20px 0px 20px;
+        background-color: #235d9f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+}
