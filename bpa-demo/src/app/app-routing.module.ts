@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SiteDashboardComponent } from './site-dashboard/site-dashboard.component';
+import { DataInsightsComponent } from './data-insights/data-insights.component';
+import { SiteDashboardComponent } from './data-insights/pages/site-dashboard/site-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: SiteDashboardComponent },
-  { path: 'site', component: SiteDashboardComponent },
+  {
+    path: 'data-insights', component: DataInsightsComponent, 
+    children: [
+      { path: 'dashboard', component: SiteDashboardComponent },
+    ]
+  }
 ];
 
 @NgModule({
