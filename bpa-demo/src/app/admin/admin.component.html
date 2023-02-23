@@ -1,7 +1,11 @@
 <div class="main-content">
+    <div id="header" class="header">
+        <app-header-component></app-header-component>
+    </div>
     <div class="left-section">
         <app-site-filter></app-site-filter>
     </div>
+    <!-- <router-outlet></router-outlet> -->
     <div class="right-section">
         <div class="top-section">
             <app-site-metric-tab></app-site-metric-tab>
@@ -10,17 +14,15 @@
             <app-bpi-contributor></app-bpi-contributor>
             <div class="graph">
                 <div class="chart-container">
-                <div class="chart-section">
-                    <app-histogram-chart></app-histogram-chart></div>   
                     <div class="chart-section">
-                        <app-trend-chart></app-trend-chart></div> 
+                        <app-histogram-chart></app-histogram-chart>
+                    </div>
+                    <div class="chart-section">
+                        <app-trend-chart></app-trend-chart>
+                    </div>
                 </div>
-
             </div>
             <app-batch-performance-list></app-batch-performance-list>
         </div>
     </div>
-   
-
 </div>
-

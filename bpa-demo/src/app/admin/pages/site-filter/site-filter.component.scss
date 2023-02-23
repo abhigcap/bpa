@@ -1,9 +1,8 @@
 .left-navigation-section {
     display: flex;
     flex-flow: column;
-    padding: 30px 10px;
-    height: calc(100% - 90px);
-    border: 1px solid #c1c1c1;
+    height: calc(100% - 67px);
+    border: 2px solid #c1c1c1;
     .form-control {
         margin-bottom: 20px;
         .form-field select,input {

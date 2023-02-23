@@ -9,6 +9,7 @@ const Exporting = require('highcharts/modules/exporting');
 Exporting(Highcharts);
 const ExportData = require('highcharts/modules/export-data');
 ExportData(Highcharts);
+
 @Component({
   selector: 'app-site-dashboard',
   templateUrl: './site-dashboard.component.html',
@@ -19,6 +20,5 @@ export class SiteDashboardComponent implements OnInit{
   constructor() {
   }
   public ngOnInit(): void {
-  }
-  
+  }  
 }
