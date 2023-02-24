@@ -1,0 +1,5 @@
+<div class="site-meteric-list">
+    <ng-container *ngFor="let tab of tabList">
+        <div class="tab" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}" >{{tab.tabName}}</div>    
+    </ng-container>
+</div>

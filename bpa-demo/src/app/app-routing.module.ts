@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { SiteDashboardComponent } from './admin/pages/site-dashboard/site-dashboard.component';
+import { DataInsightsComponent } from './data-insights/data-insights.component';
+import { SiteDashboardComponent } from './data-insights/pages/site-dashboard/site-dashboard.component';
+import { ThemeService } from './shared/services/theme.service';
 
 const routes: Routes = [
   {
-    path: 'admin', component: AdminComponent, 
+    path: 'data-insights', component: DataInsightsComponent, 
     children: [
       { path: 'dashboard', component: SiteDashboardComponent },
     ]
@@ -14,6 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[ThemeService]
 })
 export class AppRoutingModule { }

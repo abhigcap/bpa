@@ -1,0 +1,21 @@
+.right-section {
+    overflow-y: scroll;
+    max-height: 74.5vh;
+    width: -webkit-fill-available;    
+}
+.chart-container{
+    display: flex;
+    justify-content: space-between;
+    .chart-section {
+        min-width: 49%;
+        width: -webkit-fill-available;    
+    }
+}
+
+@media (min-height: 700px) {
+    .right-section-height {
+        max-height: 80.5vh;
+        height: -webkit-fill-available;
+        margin-bottom: 5px;
+    }
+}

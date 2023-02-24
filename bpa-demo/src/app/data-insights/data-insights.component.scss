@@ -1,0 +1,15 @@
+.admin-content {
+    display: flex;
+    justify-content: start;
+}
+
+.left-section {
+    padding: 10px 5px 10px 10px;
+    width: 20%;
+}
+
+.right-section {
+    padding: 10px 5px 0px 10px;
+    min-width: 70%;
+    width: -webkit-fill-available;
+}

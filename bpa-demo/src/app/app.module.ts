@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { ReusableCompComponent } from './shared/component/reusable-comp/reusable-comp.component';
-import { AdminModule } from './admin/admin.module';
+import { SharedModule } from './shared/shared.module';
+import { DataInsightsModule } from './data-insights/data-insights.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AdminModule
+    DataInsightsModule,
+    SharedModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
