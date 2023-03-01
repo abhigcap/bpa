@@ -1,13 +1,15 @@
+@import '../../../../mixsin.scss';
+
 .bpi-contributor {
     .bpi-contributor-section {
         display: flex;
     .contributor-section {
-        border: 1px solid #c1c1c1c1;
-        height: 103px;
-        width: 103px;
+        border: calculateRem(1px) solid #c1c1c1c1;
+        height: calculateRem(103px);
+        width: calculateRem(103px);
         text-align: center;
-        padding: 5px;
-        margin: 5px 10px;
+        padding: calculateRem(5px);
+        margin: calculateRem(5px) calculateRem(10px);
         .golden {
             font-size: .6em;
             text-align: left;
@@ -15,21 +17,21 @@
                 display: inline-block;
             }
             .avg-indicator {
-                width: 55px;
-                height: 8px;
+                width: calculateRem(55px);
+                height: calculateRem(8px);
                 background: #c1c1c1c1;
                 .prop {
                     background-color: green;
-                    width: 41px;
+                    width: calculateRem(41px);
                     height: 100%;
                     /* border: none; */
                     display: block;
                 }
             }
             .para-ind {
-                width: 55px;
+                width: calculateRem(55px);
                 display: flex;
-                height: 2px;
+                height: calculateRem(2px);
                 .warning {
                     width: 40%;
                     background: yellow;
@@ -47,7 +49,7 @@
         }
        
         .meterics {
-            margin-top: 6px;
+            margin-top: calculateRem(6px);
         }
         .percentage2 {
             text-align: left;
@@ -60,8 +62,8 @@
     
     .bpi-contributor-header {
         background: #c1c1c1c1;
-        margin-top: 10px;
-        height: 25px;
-        padding: 5px 10px;
+        margin-top: calculateRem(10px);
+        height: calculateRem(25px);
+        padding: calculateRem(5px) calculateRem(10px);
     }
 }

@@ -2,22 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './shared/layout/footer/footer.component';
-import { ReusableCompComponent } from './shared/component/reusable-comp/reusable-comp.component';
 import { SharedModule } from './shared/shared.module';
 import { DataInsightsModule } from './data-insights/data-insights.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
-    FooterComponent,
-    ReusableCompComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataInsightsModule,
-    SharedModule 
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

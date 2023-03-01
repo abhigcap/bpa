@@ -10,12 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HistogramChartComponent } from './pages/histogram-chart/histogram-chart.component';
 import { BatchPerformanceListComponent } from './pages/batch-performance-list/batch-performance-list.component';
 import { BpiContributorComponent } from './pages/bpi-contributor/bpi-contributor.component';
-import { HeaderComponentComponent } from './pages/header-component/header-component.component';
 import { EnterpriseDashboardComponent } from './pages/enterprise-dashboard/enterprise-dashboard.component';
 import { TrendChartComponent } from './pages/trend-chart/trend-chart.component';
 import { DataInsightsRoutingModule } from './data-insights.routing.module';
-import { HeaderComponent } from '../shared/layout/header/header.component';
 import { GetPropertyListPipe } from '../shared/pipes/get-property-list.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -27,9 +26,7 @@ import { GetPropertyListPipe } from '../shared/pipes/get-property-list.pipe';
      BpiContributorComponent,   
      EnterpriseDashboardComponent,
      TrendChartComponent,
-     HeaderComponentComponent,
      DataInsightsComponent,
-     HeaderComponent,
      GetPropertyListPipe
     ],
   imports: [
@@ -38,6 +35,7 @@ import { GetPropertyListPipe } from '../shared/pipes/get-property-list.pipe';
     AgGridModule,
     HttpClientModule,
     DataInsightsRoutingModule,
+    SharedModule
   ],
   exports:[SiteFilterComponent]
 })

@@ -1,8 +1,10 @@
+@import '../../../../mixsin.scss';
+
 .site-meteric-list {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40px;
+    height: calculateRem(40px);
     font-weight: 700;
     background: var(--color-option-2-alpha);// background-opacity(, 0.5);
 }
@@ -17,6 +19,8 @@
     align-items: center;
     opacity: 1;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
  }
 
  .selected, .tab:hover{

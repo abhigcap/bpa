@@ -1,6 +1,8 @@
+@import '../../../../mixsin.scss';
+
 .chart-header {
     background: #c1c1c1;
-    height: 25px;
-    padding: 5px;
-    margin-top: 5px;
+    height: calculateRem(25px);
+    padding: calculateRem(5px);
+    margin-top: calculateRem(5px);
 }

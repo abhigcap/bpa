@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core'
 @Directive({
   selector: '[custom]',
 })
-export class CustomeDirective implements OnInit {
+export class CustomDirective implements OnInit {
  
   @Input() custom: string='';
  

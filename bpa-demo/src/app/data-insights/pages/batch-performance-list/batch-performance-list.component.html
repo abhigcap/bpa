@@ -5,7 +5,7 @@
 <!-- Batch changes-->
 <div class="batches-nav-bar">
   <ng-container *ngFor="let tab of tabList">
-    <div class="batches-nav-bar-item" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}">{{tab.tabName}}</div>
+    <button class="batches-nav-bar-item" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}">{{tab.tabName}}</button>
   </ng-container>
 </div>
 

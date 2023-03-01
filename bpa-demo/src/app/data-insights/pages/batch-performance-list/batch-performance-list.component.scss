@@ -1,5 +1,6 @@
 @import 'ag-grid-community/styles/ag-grid.css';
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
+@import '../../../../mixsin.scss';
 
 // html, body {
 //    height: 100%;
@@ -11,9 +12,9 @@
 
 .batch-list-header {
     background: #c1c1c1;
-    height: 25px;
-    padding: 5px;
-    margin-top: 5px;
+    height: calculateRem(25px);
+    padding: calculateRem(5px);
+    margin-top: calculateRem(5px);
 }
 
 .batches-nav-bar {
@@ -23,42 +24,44 @@
         color: #000;
         opacity: 1;
         text-decoration: underline;
-        font-weight: 800;
+        font-weight: 500;
     }
 }
 
 .batches-nav-bar-item {
-    padding: 10px;
+    padding: calculateRem(10px);
     color: var(--border-color-primary);
     vertical-align: middle;
-    margin: 2px;
+    margin: calculateRem(2px);
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .batche-filters {
     max-width: 75%;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: calculateRem(20px);
     align-items: flex-end;
-    gap: 10px;
-    line-height: 20px;
-    padding: 5px;
+    gap: calculateRem(10px);
+    line-height: calculateRem(20px);
+    padding: calculateRem(5px);
     input {
-        height: 25px;
+        height: calculateRem(25px);
         width: -webkit-fill-available;
     }
     select {
-        height: 30px;
+        height: calculateRem(30px);
         width: -webkit-fill-available;
     }
     .batche-filters-items {
-        min-height: 40px;
+        min-height: calculateRem(40px);
         width: -webkit-fill-available;
-        gap: 5px;
+        gap: calculateRem(5px);
     }
     div {
         font-weight: 800;
-        font-size: 12px;
+        font-size: calculateRem(12px);
     }
 }
 
@@ -66,10 +69,10 @@
     display: flex;
     min-width: 40%;
     
-    height: 30px;
-    gap: 5px;
+    height: calculateRem(30px);
+    gap: calculateRem(5px);
     button {
-        padding: 0px 20px 0px 20px;
+        padding: 0rem calculateRem(20px) calculateRem(0px) calculateRem(20px);
         background-color: var(--button-color-primary);
         color: var(--text-color-secondary);
         border: none;
@@ -79,5 +82,5 @@
 
 .custom-ag-grid {
     min-width: 30%;
-    height: 500px;
+    height: calculateRem(500px);
 }

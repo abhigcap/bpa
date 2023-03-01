@@ -1,3 +1,5 @@
+@import '../../../../mixsin.scss';
+
 .right-section {
     overflow-y: scroll;
     max-height: 74.5vh;
@@ -16,6 +18,6 @@
     .right-section-height {
         max-height: 80.5vh;
         height: -webkit-fill-available;
-        margin-bottom: 5px;
+        margin-bottom: calculateRem(5px);
     }
 }
