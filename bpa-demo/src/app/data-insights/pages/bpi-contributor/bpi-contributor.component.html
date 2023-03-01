@@ -1,0 +1,33 @@
+<div class="bpi-contributor">
+    <div class="bpi-contributor-header"><b>BPI Contributors</b></div>
+    <div class="bpi-contributor-section">
+        <div class="contributor-section" *ngFor="let item of bpiList">
+            <div class="title">
+                <b>{{item.name}}</b>
+            </div>
+            <div class="meterics">
+                {{item.avg}}
+            </div>
+            <div class="percentage1">
+                <b>{{item.per}} </b>   
+            </div>
+            <div class="golden">
+                <div>GOLDEN</div>
+                <div style="float: right;" *ngIf="item.name === 'BPI'">
+                    <div class="avg-indicator"><div class="prop"  style="background: green;">
+                    </div>
+                    </div>
+                    <div class="para-ind">
+                        <span class="warning"></span>
+                        <span class="good"></span>
+                        <span class="excellent"></span>
+                    </div>
+                
+            </div>
+            </div>
+            <div class="percentage2">
+                <b>{{item.gper}}</b>
+            </div>
+        </div>
+        
+</div>

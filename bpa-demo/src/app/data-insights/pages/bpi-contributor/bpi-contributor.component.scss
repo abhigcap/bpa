@@ -1,0 +1,69 @@
+@import '../../../../mixsin.scss';
+
+.bpi-contributor {
+    .bpi-contributor-section {
+        display: flex;
+    .contributor-section {
+        border: calculateRem(1px) solid #c1c1c1c1;
+        height: calculateRem(103px);
+        width: calculateRem(103px);
+        text-align: center;
+        padding: calculateRem(5px);
+        margin: calculateRem(5px) calculateRem(10px);
+        .golden {
+            font-size: .6em;
+            text-align: left;
+            div {
+                display: inline-block;
+            }
+            .avg-indicator {
+                width: calculateRem(55px);
+                height: calculateRem(8px);
+                background: #c1c1c1c1;
+                .prop {
+                    background-color: green;
+                    width: calculateRem(41px);
+                    height: 100%;
+                    /* border: none; */
+                    display: block;
+                }
+            }
+            .para-ind {
+                width: calculateRem(55px);
+                display: flex;
+                height: calculateRem(2px);
+                .warning {
+                    width: 40%;
+                    background: yellow;
+                }
+                .good {
+                    width: 40%;
+                    background: red;
+                }
+                .excellent {
+                    width: 20%;
+                    background: green;
+                }
+            }
+           
+        }
+       
+        .meterics {
+            margin-top: calculateRem(6px);
+        }
+        .percentage2 {
+            text-align: left;
+        }
+        .percentage {
+            font-size: 1.5em;
+        }
+    }
+    }
+    
+    .bpi-contributor-header {
+        background: #c1c1c1c1;
+        margin-top: calculateRem(10px);
+        height: calculateRem(25px);
+        padding: calculateRem(5px) calculateRem(10px);
+    }
+}

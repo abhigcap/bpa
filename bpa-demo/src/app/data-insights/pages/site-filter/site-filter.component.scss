@@ -1,0 +1,35 @@
+@import '../../../../mixsin.scss';
+
+.left-navigation-section {
+    display: flex;
+    flex-flow: column;
+    padding: 5% 6% 10% 8%;
+    height: -webkit-fill-available;
+    margin-bottom: calc(10px + 5vh);
+    border: calculateRem(2px) solid var(--border-color-primary);
+    .form-control {
+        margin-bottom: calculateRem(10px);
+        .form-field select,input {
+            min-width: calculateRem(100px);
+            width: -webkit-fill-available;
+            min-height: calculateRem(25px);
+        }
+        .label{
+            padding-bottom: calculateRem(3px);
+        }
+    }
+    .action-buttons {
+        margin-top: calculateRem(20px);
+        text-align: center;
+        display: block;
+        padding-left: calculateRem(20px);
+        padding-right: calculateRem(20px);
+    }
+}
+
+@media (min-height: 700px) {
+    .left-navigation-section-height {
+        min-height: 75vh;
+        margin-bottom: calc(calculateRem(10px) + 1vh);
+    }
+}

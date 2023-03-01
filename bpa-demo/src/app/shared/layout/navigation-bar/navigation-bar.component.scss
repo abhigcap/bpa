@@ -1,0 +1,33 @@
+@import '../../../../mixsin.scss';
+
+.dashboard-tab{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    height: calculateRem(51px);
+    background: var(--nav-bar-bg-color);
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 calculateRem(5px);
+    button {
+        height: calculateRem(30px);
+        width: auto;
+        min-width: calculateRem(120px);
+        padding: calculateRem(5px);
+        background-color: transparent;
+        color: var(--text-color-secondary);
+        font-weight: 700;
+        margin: 0 calculateRem(5px);
+        border: none;
+    }
+    .tab:hover {
+        background: var(--background-color-secondary);
+        color: var(--text-color-primary);
+        cursor: default ; 
+    }
+    .selected {
+        background: var(--background-color-secondary);
+        color: var(--text-color-primary);
+        opacity: 1;
+    }
+}

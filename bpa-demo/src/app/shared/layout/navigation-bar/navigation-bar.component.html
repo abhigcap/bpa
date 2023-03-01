@@ -1,0 +1,5 @@
+<div class="dashboard-tab">
+    <ng-container *ngFor="let tab of navbarDetails.navbarTabList">
+      <button class="tab" (click)="onSelectTab(tab.tabName)" [ngClass]="{selected: navbarDetails.selectedTab === tab.tabName}">{{tab.tabName}}</button>
+    </ng-container>
+</div>

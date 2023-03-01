@@ -1,0 +1,7 @@
+<button 
+    [ngClass]="{'primary-btn': btnType === ButtonType.primary, 'secondary-btn': btnType === ButtonType.secondary}"
+    [title]="isShowBtnTitle ? btnTitle : ''" 
+    [ngStyle]="{'width': width, 'height': height}"
+    (click)="onBtnClick($event)">
+        {{ btnText }}
+</button>

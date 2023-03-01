@@ -1,0 +1,49 @@
+<div class="batch-list-header"><b>Batch Recipes and Equipments</b></div>
+<!-- Button to clear selection -->
+<!-- <button (click)="clearSelection()">Clear Selection</button> -->
+
+<!-- Batch changes-->
+<div class="batches-nav-bar">
+  <ng-container *ngFor="let tab of tabList">
+    <button class="batches-nav-bar-item" (click)="selectTab(tab.tabName)" [ngClass]="{selected: selectedTab === tab.tabName}">{{tab.tabName}}</button>
+  </ng-container>
+</div>
+
+<!-- Batch filters-->
+<div class="batche-filters">
+  <div class="batche-filters-items">
+    <div style="color: rgb(53, 79, 53)">{{'Batches' | uppercase }}</div>
+    <input placeholder="Batch ID" class="batche-filters-form" #BatchID>
+  </div>
+  <div class="batche-filters-items">
+    <div>{{'Formulations' | uppercase }}</div>
+    <select class="batche-filters-form" #BatchFormation>
+      <option>All</option>
+      <option *ngFor="let formulation of (batchDetails | getPropertyList : 'FORMULATIONS': true)">{{formulation}}</option>
+    </select>
+  </div>
+  <div class="batche-filters-items">
+    <div>{{'Status' | uppercase }}</div>
+    <select class="batche-filters-form" #BatchStatus>
+      <option>All</option>
+      <option *ngFor="let status of (batchDetails | getPropertyList : 'STATUS' : true )">{{status}}</option>
+    </select>
+  </div>
+  <div class="filter-btns">
+    <button class="filter-btn" (click)="onApplyBatchFilters(BatchID.value, BatchFormation.value, BatchStatus.value)">Apply</button>
+    <button class="filter-btn" (click)="getBatchDetails()">Recalculate KPIs</button>
+  </div>
+</div>
+
+<!-- AG Grid Angular Component -->
+<ag-grid-angular
+   class="ag-theme-alpine custom-ag-grid"
+   [columnDefs]="columnDefs"
+   [defaultColDef]="defaultColDef"
+   [rowData]="batchDetailsDisplay"
+   [rowSelection]="'multiple'"
+   [animateRows]="true"
+   (cellClicked)="onCellClicked($event)"
+ ></ag-grid-angular>
+
+ <!-- (gridReady)="onGridReady($event)" -->

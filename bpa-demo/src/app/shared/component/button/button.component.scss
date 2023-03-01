@@ -1,0 +1,9 @@
+.primary-btn {
+    background-color: var(--button-color-primary);
+    color: var(--text-color-secondary);
+    display:block;
+    border: none;
+    &:hover {
+        opacity: 0.9;
+    }
+}
